@@ -1,3 +1,7 @@
 [Wed Jan 21 13:59:29 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/favicon.ico
 [Wed Jan 21 14:02:00 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/partilas, referer: http://bb.home/
 [Wed Jan 21 14:12:33 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view2
+[Thu Jan 22 12:20:27 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
+[Thu Jan 22 12:25:50 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
+[Thu Jan 22 12:26:34 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view2
+[Thu Jan 22 12:28:04 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1, referer: http://bb.home/view1
