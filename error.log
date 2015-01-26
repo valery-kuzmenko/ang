@@ -14,3 +14,7 @@
 [Thu Jan 22 12:51:16 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1, referer: http://bb.home/
 [Thu Jan 22 12:52:02 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1, referer: http://bb.home/
 [Thu Jan 22 12:55:25 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1, referer: http://bb.home/
+[Mon Jan 26 12:39:56 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
+[Mon Jan 26 12:54:34 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
+[Mon Jan 26 12:57:06 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
+[Mon Jan 26 13:01:23 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1

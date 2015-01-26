@@ -1,15 +1,23 @@
 'use strict';
-
 angular.module('myApp', [
     'myApp.controllers',
-    'ngRoute'
+    'ui.router' //this is the dependency on ui.router module
 ]);
-// route params are available inside controller with $routeParams.lastname
-angular.module('myApp').config(function($routeProvider, $locationProvider) {
-    $routeProvider.when('/view1', {
+angular.module('myApp').config(function($stateProvider,
+    $urlRouterProvider, $locationProvider) { //$stateProvider and $urlRouterProvider are from ui.router module
+    $stateProvider.state('view1', {
+	url: '/view1',
 	controller: 'Controller1',
-	templateUrl: 'view1.tpl' // The ng-template id
-    }).when('/view2/:firstname/:lastname', {controller: 'Controller2',
-	templateUrl: 'view2.tpl' // The ng-template id
+	templateUrl: '/partials/view1.html'
+    }).state('view2', {url: '/view2/:firstname/:lastname',
+	controller: 'Controller2',
+	resolve: {
+	    names: function() {
+		return ['Misko', 'Vojta', 'Brad'];
+	    }
+	},
+	templateUrl: '/partials/view2.html'
     });
+    $urlRouterProvider.otherwise('/view1'); // when no route match found redirect to /view1
+    $locationProvider.html5Mode(true);
 });
