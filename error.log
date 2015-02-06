@@ -18,3 +18,23 @@
 [Mon Jan 26 12:54:34 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
 [Mon Jan 26 12:57:06 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
 [Mon Jan 26 13:01:23 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/view1
+[Thu Feb 05 19:14:17 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Thu Feb 05 19:14:17 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/lib/angular-ui-router, referer: http://bb.home/
+[Thu Feb 05 19:14:18 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
+[Thu Feb 05 19:14:32 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Thu Feb 05 19:18:21 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Thu Feb 05 19:18:21 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/lib/angular-ui-router, referer: http://bb.home/
+[Fri Feb 06 13:08:28 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:08:28 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/lib/angular-ui-router, referer: http://bb.home/
+[Fri Feb 06 13:08:29 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
+[Fri Feb 06 13:08:35 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:14:49 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:14:49 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/lib/angular/angular-ui-router.min.js, referer: http://bb.home/
+[Fri Feb 06 13:18:10 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:20:25 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:21:05 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:26:58 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:28:08 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:28:24 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:29:41 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Fri Feb 06 13:30:12 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/

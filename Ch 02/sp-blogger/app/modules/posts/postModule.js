@@ -9,7 +9,7 @@ angular.module('spBlogger.posts').config(['$stateProvider', '$locationProvider',
 	templateUrl : 'modules/posts/views/posts.html'
     });
     
-    $stateProvider.state('', {
+    $stateProvider.state('singlePost', {
 	url : '/posts/:id/:permalink',
 	controller : 'PostDetailsController',
 	templateUrl : 'modules/posts/views/singlePost.html'
