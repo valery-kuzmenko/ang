@@ -59,8 +59,8 @@ and open the template in the editor.
 			
 			-->
 		First Name:
-		<input type="text" name="firstname" ng-model="user.firstname" ng-required="true" ng-minlength="2" />
-		<!-- each field has the same states as form -->
+		<input type="text" name="firstname" ng-model="user.firstname" ng-required="true" ng-minlength="2" ng-model-options="{updateOn: 'blur mousedown', debounce: 100}"/>
+		<!-- each field has the same states as form debounce - update model with delay -->
 		<span class="error-message" ng-show="myform.firstname.$dirty && myform.firstname.$error.required">The First Name is Mandatory</span>		
 		<span class="error-message" ng-show="myform.firstname.$dirty && myform.firstname.$error.minlength">The First Name should be minimum 2 characters</span>
 			
