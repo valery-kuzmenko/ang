@@ -101,3 +101,6 @@
 [Mon Feb 23 16:31:20 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
 [Mon Feb 23 16:32:45 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
 [Mon Feb 23 16:33:35 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Thu Feb 26 17:44:24 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/modules/posts/css, referer: http://bb.home/
+[Thu Feb 26 17:44:25 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
+[Thu Feb 26 17:44:25 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico
