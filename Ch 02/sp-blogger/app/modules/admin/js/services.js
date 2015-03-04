@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'API_ENDPOINT', function($resource){
+angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'API_ENDPOINT', function($resource, API_ENDPOINT){
     return $resource(API_ENDPOINT, {id : '@_id'} , {
         update : {
             method: 'PUT'
