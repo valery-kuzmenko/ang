@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-	<head>
-		<title>TODO supply a title</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body>
-		<div>TODO write content</div>
-	</body>
-</html>
+<div class="row">
+    <div class="col-xs-8">
+        <table class="table">
+            <tr><td><h3>View all posts</h3></td>
+                <td></td>
+            </tr>
+            <tr ng-repeat="post in posts | orderBy: '-_id'">
+                <td>{{post.title}}</td>
+                <td>
+                    <a class="btn btn-primary" ui-sref="admin.postUpdate({id:post.id})">Edit</a>
+                    <a class="btn btn-danger" ng-click="deletePost(post)">Delete</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

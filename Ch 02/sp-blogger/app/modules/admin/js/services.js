@@ -9,7 +9,7 @@ angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'AP
 	    transformResponse : function(data, headersGetter){
 		var dataObj = JSON.parse(data);
 		return dataObj['data'];
-	    }
+	    },
 	}
     });
     
@@ -17,4 +17,4 @@ angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'AP
     this.showPopup = function(){
         return $window.confirm(message);
     };
-}]).value('API_ENDPOINT', 'http://api.bb.home/api/posts/:id');
+}]).value('API_ENDPOINT', 'http://api.bb.home/blogs/:id');

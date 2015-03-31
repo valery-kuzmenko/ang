@@ -26,6 +26,9 @@ angular.module('spBlogger.admin.controllers').
 		});
 	    }
         }]).
-    controller('PostListController', ['$scope', function($scope) {
-    
+    controller('PostListController', ['$scope', 'Post', function($scope, Post) {
+            $scope.posts = Post.get();
+            $scope.deletePost = function(post){
+                ;
+            }
     }]);
