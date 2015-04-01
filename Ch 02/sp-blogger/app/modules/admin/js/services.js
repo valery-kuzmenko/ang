@@ -11,6 +11,13 @@ angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'AP
 		return dataObj['data'];
 	    },
 	}
+	,getArray: {
+	    transformResponse : function(data, headersGetter){
+		var dataObj = JSON.parse(data);
+		return dataObj['data'];
+	    },
+	    isArray : true
+	}
     });
     
 }]).service('popupService', ['$window', function($window){

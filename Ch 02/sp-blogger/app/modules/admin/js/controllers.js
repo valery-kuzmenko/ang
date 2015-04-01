@@ -11,8 +11,7 @@ angular.module('spBlogger.admin.controllers').
 		$scope.buttonText = 'Saving...';
 		$scope.post.permalink = angular.lowercase($scope.post.title).replace(/[\s]/g, '-');
 		$scope.post.$save(function(){
-		    //$state.go('admin.postViewAll');
-		    alert('Saved!');
+		    $state.go('admin.postViewAll');
 		});		
 	    };
     }]).
@@ -27,7 +26,7 @@ angular.module('spBlogger.admin.controllers').
 	    }
         }]).
     controller('PostListController', ['$scope', 'Post', function($scope, Post) {
-            $scope.posts = Post.get();
+            $scope.posts = Post.getArray();
             $scope.deletePost = function(post){
                 ;
             }
