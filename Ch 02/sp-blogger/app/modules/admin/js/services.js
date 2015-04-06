@@ -17,6 +17,9 @@ angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'AP
 		return dataObj['data'];
 	    },
 	    isArray : true
+	},
+	save : {
+	    method: 'POST'
 	}
     });
     

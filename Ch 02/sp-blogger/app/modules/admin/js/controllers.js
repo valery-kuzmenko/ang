@@ -11,7 +11,7 @@ angular.module('spBlogger.admin.controllers').
 		$scope.buttonText = 'Saving...';
 		$scope.post.permalink = angular.lowercase($scope.post.title).replace(/[\s]/g, '-');
 		$scope.post.$save(function(){
-		    $state.go('admin.postViewAll');
+		    //$state.go('admin.postViewAll');
 		});		
 	    };
     }]).
