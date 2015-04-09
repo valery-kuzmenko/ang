@@ -6,16 +6,9 @@ angular.module('spBlogger.admin.services', []).factory('Post', ['$resource', 'AP
             method: 'PUT'
         },
 	get : {
-	    transformResponse : function(data, headersGetter){
-		var dataObj = JSON.parse(data);
-		return dataObj['data'];
-	    },
+
 	}
 	,getArray: {
-	    transformResponse : function(data, headersGetter){
-		var dataObj = JSON.parse(data);
-		return dataObj['data'];
-	    },
 	    isArray : true
 	},
 	save : {

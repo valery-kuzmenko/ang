@@ -27,5 +27,7 @@ angular.module('spBlogger.admin').config(['$stateProvider',
 	controller : 'PostListController',
 	templateUrl : 'modules/admin/views/admin-all-posts.html'
     });    
-}]);
+}]).config(function($httpProvider){
+    $httpProvider.defaults.useXDomain = true;
+});
 
