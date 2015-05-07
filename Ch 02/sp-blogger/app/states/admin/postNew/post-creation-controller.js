@@ -7,7 +7,6 @@ angular.module('states.admin.postNew').
 	    $scope.buttonText = 'Create';
 	    
 	    $scope.savePost = function(){
-		console.log('PostCreationController');
 		$scope.buttonText = 'Saving...';
 		$scope.post.permalink = angular.lowercase($scope.post.title).replace(/[\s]/g, '-');
 		$scope.post.$save(function(){
@@ -15,4 +14,4 @@ angular.module('states.admin.postNew').
 		});		
 	    };
 	}
-    ])
+    ]);
