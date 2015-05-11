@@ -1,7 +1,6 @@
-'use strict';
 
-angular.module('spBlogger.posts.directives', [])
-    .directive('equalHeight', function($timeout) {
+angular.module('components.helpers')
+ .directive('equalHeight', function($timeout) {
 	return {
 	    restrict: 'A',
 	    replace: false,
@@ -45,4 +44,5 @@ angular.module('spBlogger.posts.directives', [])
 		}
 	    }
 	};
-    });
+    });;
+

@@ -8,6 +8,9 @@ angular.module('spBlogger',
 	'states.admin.postNew',
 	'states.admin.postUpdate',
 	'states.admin.postViewAll',
+	'states.public',
+	'states.public.allPosts',
+	'states.public.singlePost',
     ]);
 
 

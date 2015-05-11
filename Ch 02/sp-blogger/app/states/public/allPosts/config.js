@@ -5,7 +5,7 @@ angular.module('states.public.allPosts').config(['$stateProvider',
 	$stateProvider.state('public.allPosts', {
 	    url : '/',
 	    abstract : true,
-	    templateUrl : 'layouts/public.html'
+	    templateUrl : 'states/public/allPosts/posts.html'
 	});
     }
 ]);
