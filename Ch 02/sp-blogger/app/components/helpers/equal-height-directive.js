@@ -5,6 +5,7 @@ angular.module('components.helpers')
 	    restrict: 'A',
 	    replace: false,
 	    link: function(scope, elem, attrs) {
+
 		var childItemClass = '';
 		if (attrs.equalHeightClass) {
 		    childItemClass = '.' + attrs.equalHeightClass;

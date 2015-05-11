@@ -12,4 +12,4 @@ angular.module('components.posts').factory('Post', ['$resource', 'API_ENDPOINT',
 	    method: 'POST'
 	}
     });
-}]).value('API_ENDPOINT', 'http://api.bb.home/blogs/:id');
+}]);

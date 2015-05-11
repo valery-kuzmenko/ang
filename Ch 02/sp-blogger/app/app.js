@@ -1,9 +1,10 @@
 'use strict';
 
 angular.module('spBlogger', 
-    [
+    [	'ngResource',
 	'components.posts', 
 	'components.comments',
+	'components.helpers',
 	'states.admin',
 	'states.admin.postNew',
 	'states.admin.postUpdate',
