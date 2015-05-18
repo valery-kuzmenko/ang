@@ -1,0 +1,47 @@
+<div class="row" id='pcd-comments'>
+	<h3 class="text-center text-primary">Comments</h3>
+	<form name='comments' role='form' class='form-horizontal'>
+		<div class='form-group'>
+			<div class='col-xs-8 col-xs-offset-2'>
+				<label class='control-label' for='user_name'>Name: </label>
+				<input class='form-control' type='text' name='user_name' placeholder='Enter Your name'/>
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class='col-xs-8 col-xs-offset-2'>
+				<label class='control-label' for='comment'>Comment: </label>
+				<textarea class='form-control' name='comment' placeholder='Enter Your comment' ></textarea>
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class='col-xs-8 col-xs-offset-2'>
+				<input type='submit' value ='submit' class='btn btn-success' />
+			</div>
+		</div>
+	</form>
+	<div class="col-xs-8 col-xs-offset-2 comment-item" ng-repeat="comment in comments">
+		<b>By: {{comment.user}}</b>
+		<p class="comment-text" ng-init="obj = {isShown : false}">
+			<span>{{comment.comment| limitTo : 200}}</span>
+			<span ng-show="obj.isShown">{{comment.comment| limitTo : comment.comment.length : 200}}</span>
+			<span ng-if="comment.comment.length > 200" ng-click="obj.isShown = !obj.isShown" href="">
+				<span ng-if="!obj.isShown">
+					...<br /><a title="expand" href="javascript: void(0);">Expand</a>
+				</span>
+				<span ng-if="obj.isShown">
+					<br /><a title="hide" href="javascript: void(0);">Hide</a>
+				</span>
+			</span>
+		</p>
+		<i class="text-primary">{{comment.created| date}}</i>
+		<br/><br/>		
+	</div>
+	<div class="col-xs-8 col-xs-offset-2 text-center">
+		<a href="javascript: void(0);" ng-if="current_page && current_page > 1" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(1)">First</a>
+		<a href="javascript: void(0);" ng-if="current_page && current_page > 1" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(current_page - 1)">Prev</a>
+		<a href="javascript: void(0);" class="btn btn-default" scroll-to scroll-target = '#pcd-comments' ng-repeat="page in pages" ng-click="loadComments(page)" ng-class="{'active' : page == current_page}">{{page}}</a>
+		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(current_page + 1)">Next</a>
+		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(pages.length)">Last</a>	
+	</div>
+</div>
+

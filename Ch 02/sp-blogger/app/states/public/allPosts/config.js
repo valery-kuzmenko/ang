@@ -3,7 +3,7 @@
 angular.module('states.public.allPosts').config(['$stateProvider', 
     function($stateProvider){
 	$stateProvider.state('public.allPosts', {
-	    url : '/',
+	    url : '/posts',
 	    controller : 'PostController',
 	    templateUrl : 'states/public/allPosts/posts.html'
 	});
