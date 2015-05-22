@@ -2,6 +2,7 @@
 
 angular.module('spBlogger', 
     [	'ngResource',
+	'ngAnimate',
 	'components.posts', 
 	'components.comments',
 	'components.helpers',

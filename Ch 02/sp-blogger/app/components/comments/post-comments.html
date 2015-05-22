@@ -23,9 +23,9 @@
 	</form>
 	<div class="col-xs-12  comment-item" ng-repeat="comment in comments">
 		<b>By: {{comment.user}}</b>
-		<p class="comment-text" ng-init="obj = {isShown : false}">
+		<p ng-init="obj = {isShown : false}">
 			<span>{{comment.comment| limitTo : 200}}</span>
-			<span ng-show="obj.isShown">{{comment.comment| limitTo : comment.comment.length : 200}}</span>
+			<span class='pcd-comment-text' ng-show="obj.isShown">{{comment.comment| limitTo : comment.comment.length : 200}}</span>
 			<span ng-if="comment.comment.length > 200" ng-click="obj.isShown = !obj.isShown" href="">
 				<span ng-if="!obj.isShown">
 					...<br /><a title="expand" href="javascript: void(0);">Expand</a>
