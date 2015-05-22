@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/W:/sites/bb/www/app/states/public/singlePost/post-details-controller.js</file>
-            <file>file:/W:/sites/bb/www/app/modules/posts/js/controllers.js</file>
-            <file>file:/W:/sites/bb/www/app/index.html</file>
-            <file>file:/W:/sites/bb/www/app/states/public/singlePost/config.js</file>
+            <file>file:/Y:/var/www/angular/www/app/modules/admin/views/admin-all-posts.html</file>
+            <file>file:/Y:/var/www/angular/www/app/modules/admin/adminModule.js</file>
+            <file>file:/Y:/var/www/angular/www/app/modules/posts/js/services.js</file>
+            <file>file:/Y:/var/www/angular/www/app/index.html</file>
+            <file>file:/Y:/var/www/angular/www/app/js/app.js</file>
+            <file>file:/Y:/var/www/angular/www/app/modules/admin/js/services.js</file>
+            <file>file:/Y:/var/www/angular/www/app/modules/posts/postModule.js</file>
         </group>
     </open-files>
 </project-private>
