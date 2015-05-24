@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('spBlogger', 
-    [	'ngResource',
+    [
+        'ngResource',
 	'ngAnimate',
+        'components.transl',
 	'components.posts', 
 	'components.comments',
 	'components.helpers',
