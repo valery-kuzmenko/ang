@@ -1,20 +1,20 @@
 <div class="container">
 	<div class="jumbotron text-center">
-		<h1>The Single Page Blogger</h1>
-		<p>One stop blogging solution</p>
-		<p>Admin panel</p>
-                <div class="row text-center" ng-controller="TranslateController">
-                    <div class="btn btn-default" ng-click="changeLanguage('en')">English</div>
-                    <div class="btn btn-default" ng-click="changeLanguage('ru')">Русский</div>
-                </div>                
+		<a class="h1" ui-sref="public.allPosts">{{'layout.main.header' | translate}}</a>
+		<p>{{'layout.main.header1' | translate}}</p>
+		<p>{{'layout.main.header3' | translate}}</p>
+        <div class="row text-center" ng-controller="TranslateController" ng-model="language">
+            <div class="btn btn-primary" ng-class="{'active': currentLanguage == 'en'}" ng-click="changeLanguage('en')">English</div>
+            <div class="btn btn-success" ng-class="{'active': currentLanguage == 'ru'}" ng-click="changeLanguage('ru')">Русский</div>
+        </div>                
 	</div>
 	<div class="row">
 		<div class="col-xs-3">
 			<ul class="nav nav-pills nav-stacked on-click-make-active">
 				<!--Loads admin.viewAll state, doesn't contain anything right now -->
-				<li ui-sref-active="active"><a ui-sref="admin.postViewAll">View All Posts</a></li>
+				<li ui-sref-active="active"><a ui-sref="admin.postViewAll">{{'admin.allposts' | translate}}</a></li>
 				<!--Loads admin.postNew state -->
-				<li ui-sref-active="active"><a ui-sref="admin.postNew">Add Post</a></li>
+				<li ui-sref-active="active"><a ui-sref="admin.postNew">{{'admin.addpost' | translate}}</a></li>
 			</ul>
 		</div>
 		<div class="col-xs-9 border-left">
@@ -23,7 +23,7 @@
 	</div>
 	<div class="row footer">
 		<div class="col-xs-12 text-center">
-			<p>The Single Page Blogger <app-version/></p>
+			<p>{{'layout.main.footer' | translate}} <app-version/></p>
 		</div>
 	</div>
 </div>

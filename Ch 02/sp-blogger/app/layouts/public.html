@@ -1,18 +1,18 @@
 <div class="container">
     <br/>
     <div class="jumbotron text-center">
-        <a class="h1" ui-sref="public.allPosts">The Single Page Blogger</a>
-        <p>One step blogging solution</p>
-        <p>Public Site</p>
-        <div class="row text-center" ng-controller="TranslateController">
-            <div class="btn btn-default" ng-click="changeLanguage('en')">English</div>
-            <div class="btn btn-default" ng-click="changeLanguage('ru')">Русский</div>
+        <a class="h1" ui-sref="public.allPosts">{{'layout.main.header' | translate}}</a>
+        <p>{{'layout.main.header1' | translate}}</p>
+        <p>{{'layout.main.header2' | translate}}</p>
+        <div class="row text-center" ng-controller="TranslateController" ng-model="language">
+            <div class="btn btn-primary" ng-class="{'active': currentLanguage == 'en'}" ng-click="changeLanguage('en')">English</div>
+            <div class="btn btn-success" ng-class="{'active': currentLanguage == 'ru'}" ng-click="changeLanguage('ru')">Русский</div>
         </div>    
     </div>    
     <div ui-view></div>
     <div class="row footer">
         <div class="col-xs-12 text-center">
-            <p>The Single Page Blogger <app-version/></p>
+            <p>{{'layout.main.footer' | translate}} <app-version/></p>
         </div>
     </div>
 </div>

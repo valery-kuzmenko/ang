@@ -1,13 +1,18 @@
 'use strict';
 
 angular.module('states.admin.postUpdate').
-    controller('PostUpdateController', ['$scope', '$state', 'Post', '$stateParams', 
-	function($scope, $state, Post, $stateParams) {	    
+    controller('PostUpdateController', ['$scope', '$state', 'Post', '$stateParams', '$translate', 
+	function($scope, $state, Post, $stateParams, $translate) {	    
 	    $scope.post = Post.get({id : $stateParams.id});
-	    $scope.buttonText = 'Update';
+	    
+	    $translate('admin.update').then(function(result){
+		$scope.buttonText = result;
+	    });
 	    
 	    $scope.updatePost = function(){
-		$scope.buttonText = 'Updating...';
+		$translate('admin.updating...').then(function(result){
+		    $scope.buttonText = result;
+		});
 		$scope.post.$update(function(){
 		    $state.go('admin.postViewAll');
 		});
