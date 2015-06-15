@@ -8,6 +8,7 @@ angular.module('spBlogger',
 	'components.posts', 
 	'components.comments',
 	'components.helpers',
+	'components.users',
 	'states.admin',
 	'states.admin.postNew',
 	'states.admin.postUpdate',
@@ -15,6 +16,7 @@ angular.module('spBlogger',
 	'states.public',
 	'states.public.allPosts',
 	'states.public.singlePost',
+	'states.public.registration',
     ]);
 
 
