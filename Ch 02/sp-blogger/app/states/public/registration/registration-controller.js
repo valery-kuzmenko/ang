@@ -4,14 +4,25 @@ angular.module('states.public.registration').controller('registrationController'
     $scope.user = new User();
     
     $scope.register = function(){
-	$scope.user.$save(function(data){
+	$scope.user.$save(
+            function(data){
+                $scope.successMessage = true;
+                $scope.user = new User();
 
-	    $scope.successMessage = true;
-	    $scope.user = new User();
-	    
-	    $timeout(function(){
-		$state.go('public.allPosts');	
-	    },2000);
-	});
+                $timeout(function(){
+                    $state.go('public.allPosts');	
+                },2000);
+            },
+            function(data){
+                if(data.status == 400 && data.data.errors && data.data.errors.children) {
+                    angular.forEach(data.data.errors.children, function(value, key){
+                        if(value.errors && angular.isArray(value.errors)) {
+                            $scope.registrationForm[key].$setValidity('serverError', false);
+                            $scope.registrationForm[key].$error.serverError = value.errors.join(', ');
+                        }
+                    });
+                }
+            }
+        );
     }
 }]);

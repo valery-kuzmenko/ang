@@ -7,15 +7,17 @@
 				<div class="form-group" ng-class="{'has-error' : registrationForm.username.$dirty && registrationForm.username.$invalid}">
 					<input type="text" class="form-control" ng-required="true" ng-model='user.username' name="username" id="username" placeholder="{{'form.name' | translate}}" />
 					<span class="error-message" ng-show="registrationForm.username.$dirty && registrationForm.username.$error.required">{{'form.error.empty' | translate}}</span>
-					<span class="error-message" ng-show="">form.registration.error.name.empty</span>
+					<span class="error-message" ng-show="registrationForm.username.$dirty && registrationForm.username.$error.serverError">{{registrationForm.username.$error.serverError}}</span>
 				</div>
 				<div class="form-group" ng-class="{'has-error' : registrationForm.email.$dirty && registrationForm.email.$invalid}">
-					<input type="text" ng-required="true" class="form-control" ng-model='user.email' name="email" id="email" placeholder="{{'form.email' | translate}}" />
+					<input type="text" server-error ng-required="true" class="form-control" ng-model='user.email' name="email" id="email" placeholder="{{'form.email' | translate}}" />
 					<span class="error-message" ng-show="registrationForm.email.$dirty && registrationForm.email.$error.required">{{'form.error.empty' | translate}}</span>
+                                        <span class="error-message" ng-show="registrationForm.email.$dirty && registrationForm.email.$error.serverError">{{registrationForm.email.$error.serverError}}</span>
 				</div>
 				<div class="form-group" ng-class="{'has-error' : registrationForm.plainPassword.$dirty && registrationForm.plainPassword.$invalid}"> 
 					<input type="text" ng-required="true" class="form-control" ng-model='user.plainPassword' name="plainPassword" id="plainPassword" placeholder="{{'form.password' | translate}}" />
 					<span class="error-message" ng-show="registrationForm.plainPassword.$dirty && registrationForm.plainPassword.$error.required">{{'form.error.empty' | translate}}</span>
+                                        <span class="error-message" ng-show="registrationForm.plainPassword.$dirty && registrationForm.plainPassword.$error.serverError">{{registrationForm.plainPassword.$error.serverError}}</span>
 				</div>
 			
 				<input type="submit" ng-disabled="registrationForm.$invalid" value="{{'form.submit' | translate}}" class="btn btn-success center-block" />
