@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('states.public.registration').controller('registrationController', ['User', '$scope', '$timeout', '$state' , function(User, $scope, $timeout, $state){
+angular.module('states.public.registration').controller('registrationController', ['User', '$scope', '$timeout', '$state' ,'$translate', function(User, $scope, $timeout, $state, $translate){
     $scope.user = new User();
     
     $scope.register = function(){
@@ -18,7 +18,10 @@ angular.module('states.public.registration').controller('registrationController'
                     angular.forEach(data.data.errors.children, function(value, key){
                         if(value.errors && angular.isArray(value.errors)) {
                             $scope.registrationForm[key].$setValidity('serverError', false);
-                            $scope.registrationForm[key].$error.serverError = value.errors.join(', ');
+				$translate(value.errors.join(', ')).then(function (translation) {
+				    $scope.registrationForm[key].$error.serverError = translation;
+				});
+                            ;
                         }
                     });
                 }

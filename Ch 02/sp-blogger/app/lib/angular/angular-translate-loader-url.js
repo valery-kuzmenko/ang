@@ -51,7 +51,6 @@ function $translateUrlLoader($q, $http) {
 
     var deferred = $q.defer(),
         requestParams = {};
-
     requestParams[options.queryParameter || 'lang'] = options.key;
 
     $http(angular.extend({

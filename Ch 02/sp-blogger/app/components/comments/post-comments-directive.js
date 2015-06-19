@@ -12,7 +12,8 @@ angular.module('components.comments').directive('postComments', ['Comment', '$st
 
 		    $scope.comments = Comment.getArray({id: $stateParams.id, page: page, rpp: 5}, function(result, headers) {
 			var response_headers = headers(), pages = [];
-
+			$scope.pagination_data = {headers: response_headers, page : page};
+			
 			if (response_headers['blogger-pages-count'] && response_headers['blogger-pages-count'] > 1) {
 			    for (var i = 1; i <= response_headers['blogger-pages-count']; i++) {
 				pages[pages.length] = i;

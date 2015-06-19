@@ -45,5 +45,6 @@
 		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(current_page + 1)">{{'pagination.next' | translate}}</a>
 		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(pages.length)">{{'pagination.last' | translate}}</a>	
 	</div>
+	<pagination pagination-onclick="loadComments"></pagination>
 </div>
 
