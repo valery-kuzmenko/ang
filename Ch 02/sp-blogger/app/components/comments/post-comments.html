@@ -1,6 +1,6 @@
 <div class="row" id='pcd-comments'>
 	<h3 class="text-center text-primary col-xs-12">{{'directive.comments.title' | translate}}</h3>
-	<form name='comments' role='form' class='form-horizontal' ng-submit="createComment()">
+	<form name='comments' role='form' class='form-horizontal' ng-submit="paginationClick()">
 		<div class='form-group'>
 			<div class='col-xs-12 '>
 				<label class='control-label' for='user_name'>{{'directive.comments.name' | translate}}: </label>
@@ -38,13 +38,6 @@
 		<i class="text-primary">{{comment.created| date : 'MM.dd.yyyy' : UTC}}</i>
 		<br/><br/>		
 	</div>
-	<div class="col-xs-12  text-center">
-		<a href="javascript: void(0);" ng-if="current_page && current_page > 1" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(1)">{{'pagination.first' | translate}}</a>
-		<a href="javascript: void(0);" ng-if="current_page && current_page > 1" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(current_page - 1)">{{'pagination.prev' | translate}}</a>
-		<a href="javascript: void(0);" class="btn btn-default" scroll-to scroll-target = '#pcd-comments' ng-repeat="page in pages" ng-click="loadComments(page)" ng-class="{'active' : page == current_page}">{{page}}</a>
-		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(current_page + 1)">{{'pagination.next' | translate}}</a>
-		<a href="javascript: void(0);" ng-if="current_page && current_page < pages.length" scroll-to scroll-target = '#pcd-comments' class="btn btn-default" ng-click="loadComments(pages.length)">{{'pagination.last' | translate}}</a>	
-	</div>
-	<pagination pagination-onclick="loadComments"></pagination>
+	<pagination></pagination>
 </div>
 

@@ -294,3 +294,5 @@
 [Fri Jun 19 13:16:30 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico, referer: http://bb.home/
 [Fri Jun 19 14:36:14 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico, referer: http://bb.home/
 [Fri Jun 19 16:13:47 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico, referer: http://bb.home/
+[Tue Jun 30 17:20:58 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico, referer: http://bb.home/
+[Tue Jun 30 17:20:58 2015] [error] [client 192.168.243.1] File does not exist: /var/sites/bb/www/app/favicon.ico, referer: http://bb.home/

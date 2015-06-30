@@ -6,21 +6,14 @@ angular.module('components.comments').directive('postComments', ['Comment', '$st
 	    templateUrl: 'components/comments/post-comments.html',
 	    replace: true,
 	    link: function($scope, elem, attr) {
-		$scope.loadComments = function(page) {
-		    if (!page)
+		$scope.paginationClick = function(page) {
+		    if(!page) {
 			page = 1;
-
+		    } 
 		    $scope.comments = Comment.getArray({id: $stateParams.id, page: page, rpp: 5}, function(result, headers) {
-			var response_headers = headers(), pages = [];
-			$scope.pagination_data = {headers: response_headers, page : page};
+			var response_headers = headers();
+			$scope.pagination_data = {pages_cnt: response_headers['blogger-pages-count'], page : page};
 			
-			if (response_headers['blogger-pages-count'] && response_headers['blogger-pages-count'] > 1) {
-			    for (var i = 1; i <= response_headers['blogger-pages-count']; i++) {
-				pages[pages.length] = i;
-			    }
-			    $scope.current_page = page;
-			}
-			$scope.pages = pages;
 		    });
 		};
 
@@ -28,11 +21,11 @@ angular.module('components.comments').directive('postComments', ['Comment', '$st
 
 		$scope.createComment = function() {
 		    $scope.comment.$save({'id': $stateParams.id}, function() {
-			$scope.loadComments();
+			$scope.paginationClick();
 		    });
 		}
 
-		$scope.loadComments();
+		$scope.paginationClick();
 	    }
 	};
     }]);
